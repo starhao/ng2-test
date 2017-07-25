@@ -24,6 +24,7 @@ import {KeyUpcomponent} from './keyup.component';
   /*本模块需要的其他模块*/
   imports: [BrowserModule],
 
+  /* 服务的创建者，并加入到全局服务列表中，可用于应用任何部分*/
   providers: [],
 
   /*指定主模块*/
