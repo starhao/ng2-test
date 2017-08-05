@@ -25,5 +25,11 @@ export class AppComponent {
     }
   }
 
+  oneNumber = 1;
+
+  getval() {
+    return 1;
+  }
+
 
 }
