@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Hero} from './hero';
 import {HeroService} from './hero.service';
-
+import {Router} from "@angular/router"
 @Component({
   selector: 'my-heroes',
   templateUrl: './hero.component.html',
@@ -11,7 +11,8 @@ import {HeroService} from './hero.service';
 
 export class HeroComponent implements OnInit {
 
-  constructor(private heroService: HeroService) {
+  constructor(private heroService: HeroService,
+              private router: Router) {
   }
 
   /*不需要明确定义属性的类型,TypeScript能从HEROS数组中推断出来*/
@@ -32,5 +33,8 @@ export class HeroComponent implements OnInit {
     this.getHeroes();
   }
 
+  gotoDetail() {
+    this.router.navigate(['/detail',this.selectedHero.id]);
+  }
 
 }
